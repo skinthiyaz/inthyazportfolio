@@ -1,10 +1,10 @@
-
 import React, { useEffect } from 'react';
 import { ArrowRight, Code, Layout, Github, Linkedin, Mail, Phone, Layers, Monitor } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
 import ProjectCard from '@/components/ProjectCard';
 import ServiceCard from '@/components/ServiceCard';
 import SkillBar from '@/components/SkillBar';
@@ -112,62 +112,8 @@ const Index = () => {
       <Navbar />
       
       <main>
-        {/* Hero Section */}
-        <section id="home" className="min-h-screen flex items-center pt-20">
-          <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <span className="px-3 py-1 text-sm bg-accent text-accent-foreground rounded-full inline-block">
-                Frontend Developer
-              </span>
-              
-              <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
-                Hey, I'm <span className="text-primary">Shaik Inthiyaz</span>
-              </h1>
-              
-              <p className="text-lg md:text-xl text-muted-foreground">
-                A passionate frontend developer with strong skills in React.js, JavaScript, and Python. Recent MCA graduate looking to create impactful web experiences.
-              </p>
-              
-              <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg">
-                  <a href="#contact">
-                    Contact Me <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
-                
-                <Button asChild variant="outline" size="lg">
-                  <a href="#projects">View Projects</a>
-                </Button>
-              </div>
-              
-              <div className="flex items-center space-x-4 pt-4">
-                <a 
-                  href="#" 
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="GitHub"
-                >
-                  <Github size={20} />
-                </a>
-                <a 
-                  href="#" 
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin size={20} />
-                </a>
-              </div>
-            </div>
-            
-            <div className="relative lg:h-[450px] hidden lg:block">
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/50 overflow-hidden flex items-center justify-center">
-                <div className="rounded-full h-64 w-64 bg-background shadow-lg flex items-center justify-center">
-                  {/* Profile image placeholder */}
-                  <div className="text-6xl font-bold text-primary">SI</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Enhanced Hero Section */}
+        <HeroSection />
         
         {/* About Section */}
         <section id="about" className="py-16 md:py-24 bg-accent/10">
