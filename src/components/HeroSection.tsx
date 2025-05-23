@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Github, Linkedin, Download, Sparkles, Code2, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -36,8 +35,9 @@ const HeroSection = () => {
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold leading-tight">
               Hey, I&apos;m{' '}
-              <span className="bg-gradient-to-r from-primary via-blue-600 to-accent bg-clip-text text-transparent animate-pulse">
+              <span className="relative inline-block bg-gradient-to-r from-primary via-blue-600 to-accent bg-clip-text text-transparent bg-[length:200%_100%] animate-[shimmer_3s_ease-in-out_infinite]">
                 Shaik Inthiyaz
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[slide_2s_ease-in-out_infinite] rounded-lg"></span>
               </span>
             </h1>
             
