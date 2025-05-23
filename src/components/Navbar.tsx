@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -13,8 +12,9 @@ const Navbar = () => {
       
       sections.forEach((section) => {
         const sectionId = section.getAttribute('id') || '';
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
+        const htmlElement = section as HTMLElement;
+        const sectionTop = htmlElement.offsetTop;
+        const sectionHeight = htmlElement.offsetHeight;
         
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           setActiveSection(sectionId);
