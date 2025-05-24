@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -54,7 +55,7 @@ const Navbar = () => {
     )}>
       <div className="container flex items-center justify-between">
         <a href="#home" className="flex items-center">
-          <span className="text-xl font-bold font-heading text-primary">SI.</span>
+          <span className="text-xl font-bold font-heading text-primary">Inthiyaz</span>
         </a>
 
         <nav className="hidden md:flex items-center space-x-1">

@@ -18,6 +18,7 @@ const Index = () => {
       title: 'Employee Management System',
       description: 'A full-featured React application for managing employee data, with CRUD operations, search functionality, and responsive design.',
       technologies: ['React', 'JavaScript', 'CSS', 'Bootstrap'],
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
       demoLink: '#',
       githubLink: '#',
     },
@@ -25,6 +26,7 @@ const Index = () => {
       title: 'Brain Hemorrhage Detection',
       description: 'ML/DL project for detecting brain hemorrhage from medical images using convolutional neural networks and advanced image processing techniques.',
       technologies: ['Python', 'TensorFlow', 'OpenCV', 'Scikit-Learn'],
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
       demoLink: '#',
       githubLink: '#',
     },
@@ -32,6 +34,7 @@ const Index = () => {
       title: 'Personal Portfolio',
       description: 'A responsive portfolio website showcasing my projects and skills, built using modern frontend technologies.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
       demoLink: '#',
       githubLink: '#',
     },
@@ -221,6 +224,7 @@ const Index = () => {
                     title={project.title}
                     description={project.description}
                     technologies={project.technologies}
+                    image={project.image}
                     demoLink={project.demoLink}
                     githubLink={project.githubLink}
                     className={`delay-${(index + 1) * 100} border-primary/20 bg-gradient-to-br from-background to-primary/5 hover:shadow-2xl hover:border-primary/40 transition-all duration-500 hover:-translate-y-2`}
