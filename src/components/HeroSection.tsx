@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, Github, Linkedin, Download, Sparkles, Code2, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -114,7 +115,7 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* Right Side - Enhanced Visual */}
+        {/* Right Side - Profile Picture */}
         <div className="relative lg:h-[600px] hidden lg:block animate-fade-in delay-300">
           {/* Main Circle */}
           <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-blue-500/10 to-accent/30 overflow-hidden backdrop-blur-sm border border-primary/20">
@@ -126,11 +127,13 @@ const HeroSection = () => {
             {/* Profile Circle */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative">
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center shadow-2xl border-4 border-white/20 backdrop-blur-lg">
-                  {/* Profile Image Placeholder */}
-                  <div className="text-8xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent">
-                    SI
-                  </div>
+                <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-lg">
+                  {/* Profile Image */}
+                  <img 
+                    src="https://i.postimg.cc/4yyMY0fZ/Whats-App-Image-2025-05-24-at-13-00-14-c4486726.jpg"
+                    alt="Shaik Inthiyaz"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 {/* Orbiting Elements */}
