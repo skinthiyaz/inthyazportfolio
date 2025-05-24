@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -27,8 +28,22 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      console.log('Sending email with EmailJS...', formData);
+      
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'service_182388i', // Your Service ID
+        'template_jj0aq0b', // Your Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'Shaik Inthiyaz', // Your name
+        },
+        'rBDWIis5GrZK6sfbm' // Your Public Key
+      );
+
+      console.log('EmailJS result:', result);
       
       // Reset form
       setFormData({
@@ -39,13 +54,14 @@ const ContactForm = () => {
       
       // Success notification
       toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I will get back to you soon.",
+        title: "Message Sent Successfully!",
+        description: "Thank you for your message. I will get back to you soon via email.",
       });
     } catch (error) {
+      console.error('EmailJS error:', error);
       toast({
-        title: "Something went wrong!",
-        description: "Please try again later.",
+        title: "Failed to Send Message",
+        description: "There was an error sending your message. Please try again or contact me directly.",
         variant: "destructive",
       });
     } finally {
