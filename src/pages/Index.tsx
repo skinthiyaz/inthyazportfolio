@@ -20,7 +20,7 @@ const Index = () => {
       technologies: ['React', 'JavaScript', 'CSS', 'Bootstrap'],
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
       demoLink: '#',
-      githubLink: '#',
+      githubLink: 'https://github.com/skinthiyaz',
     },
     {
       title: 'Brain Hemorrhage Detection',
@@ -28,7 +28,7 @@ const Index = () => {
       technologies: ['Python', 'TensorFlow', 'OpenCV', 'Scikit-Learn'],
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
       demoLink: '#',
-      githubLink: '#',
+      githubLink: 'https://github.com/skinthiyaz',
     },
     {
       title: 'Personal Portfolio',
@@ -36,7 +36,7 @@ const Index = () => {
       technologies: ['React', 'TypeScript', 'Tailwind CSS'],
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
       demoLink: '#',
-      githubLink: '#',
+      githubLink: 'https://github.com/skinthiyaz',
     },
   ];
 
@@ -346,7 +346,7 @@ const Index = () => {
                   
                   <div className="flex items-center space-x-4">
                     <Button asChild variant="outline" size="lg" className="group border-primary/30 hover:border-primary">
-                      <a href="#" className="flex items-center gap-2">
+                      <a href="https://github.com/skinthiyaz" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                         <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
                         GitHub
                       </a>

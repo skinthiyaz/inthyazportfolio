@@ -98,7 +98,9 @@ const HeroSection = () => {
             <span className="text-sm text-muted-foreground">Follow me:</span>
             <div className="flex gap-3">
               <a 
-                href="#" 
+                href="https://github.com/skinthiyaz" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group p-3 rounded-full bg-gradient-to-br from-primary/10 to-transparent border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-110"
                 aria-label="GitHub"
               >
