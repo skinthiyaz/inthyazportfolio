@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { ArrowRight, Code, Layout, Github, Linkedin, Mail, Phone, Layers, Monitor, Download, Calendar, GraduationCap, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,7 +11,6 @@ import ProjectCard from '@/components/ProjectCard';
 import ServiceCard from '@/components/ServiceCard';
 import SkillBar from '@/components/SkillBar';
 import ContactForm from '@/components/ContactForm';
-import ResumeSection from '@/components/ResumeSection';
 
 const Index = () => {
   const projects = [
@@ -18,7 +18,7 @@ const Index = () => {
       title: 'Employee Management System',
       description: 'A full-featured React application for managing employee data, with CRUD operations, search functionality, and responsive design.',
       technologies: ['React', 'JavaScript', 'CSS', 'Bootstrap'],
-      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
       demoLink: '#',
       githubLink: 'https://github.com/skinthiyaz',
     },
@@ -26,7 +26,7 @@ const Index = () => {
       title: 'Brain Hemorrhage Detection',
       description: 'ML/DL project for detecting brain hemorrhage from medical images using convolutional neural networks and advanced image processing techniques.',
       technologies: ['Python', 'TensorFlow', 'OpenCV', 'Scikit-Learn'],
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
       demoLink: '#',
       githubLink: 'https://github.com/skinthiyaz',
     },
@@ -34,7 +34,7 @@ const Index = () => {
       title: 'Personal Portfolio',
       description: 'A responsive portfolio website showcasing my projects and skills, built using modern frontend technologies.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-      image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
       demoLink: '#',
       githubLink: 'https://github.com/skinthiyaz',
     },
@@ -261,9 +261,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        {/* Resume Section */}
-        <ResumeSection />
         
         {/* Services Section - Enhanced */}
         <section id="services" className="py-20 md:py-32 relative overflow-hidden">
@@ -391,7 +388,6 @@ const Index = () => {
               <a href="#home" className="text-muted-foreground hover:text-primary transition-colors font-medium">Home</a>
               <a href="#about" className="text-muted-foreground hover:text-primary transition-colors font-medium">About</a>
               <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors font-medium">Projects</a>
-              <a href="#resume" className="text-muted-foreground hover:text-primary transition-colors font-medium">Resume</a>
               <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors font-medium">Contact</a>
             </div>
           </div>

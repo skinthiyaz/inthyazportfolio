@@ -10,7 +10,6 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,7 +37,6 @@ const ContactForm = () => {
         {
           from_name: formData.name,
           from_email: formData.email,
-          subject: formData.subject,
           message: formData.message,
           to_name: 'Shaik Inthiyaz', // Your name
         },
@@ -51,7 +49,6 @@ const ContactForm = () => {
       setFormData({
         name: '',
         email: '',
-        subject: '',
         message: '',
       });
       
@@ -99,20 +96,6 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           placeholder="Your email"
-          required
-        />
-      </div>
-      
-      <div>
-        <label htmlFor="subject" className="block text-sm font-medium mb-1">
-          Subject
-        </label>
-        <Input
-          id="subject"
-          name="subject"
-          value={formData.subject}
-          onChange={handleChange}
-          placeholder="Subject of your message"
           required
         />
       </div>
