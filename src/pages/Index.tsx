@@ -7,6 +7,10 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
+import ProfileSnapshot from '@/components/ProfileSnapshot';
+import WorkExperience from '@/components/WorkExperience';
+import Certifications from '@/components/Certifications';
+import ResumeDownload from '@/components/ResumeDownload';
 import ProjectCard from '@/components/ProjectCard';
 import ServiceCard from '@/components/ServiceCard';
 import SkillBar from '@/components/SkillBar';
@@ -15,26 +19,18 @@ import ContactForm from '@/components/ContactForm';
 const Index = () => {
   const projects = [
     {
-      title: 'Employee Management System',
-      description: 'A full-featured React application for managing employee data, with CRUD operations, search functionality, and responsive design.',
-      technologies: ['React', 'JavaScript', 'CSS', 'Bootstrap'],
+      title: 'Job Board Platform',
+      description: 'A comprehensive job board platform with React, featuring API integration, real-time updates via WebSocket, and deployed with CI/CD pipeline for seamless user experience.',
+      technologies: ['React', 'WebSocket', 'API Integration', 'CI/CD'],
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
       demoLink: '#',
       githubLink: 'https://github.com/skinthiyaz',
     },
     {
-      title: 'Brain Hemorrhage Detection',
-      description: 'ML/DL project for detecting brain hemorrhage from medical images using convolutional neural networks and advanced image processing techniques.',
-      technologies: ['Python', 'TensorFlow', 'OpenCV', 'Scikit-Learn'],
+      title: 'Truck Management System',
+      description: 'React-based fleet management UI with real-time tracking capabilities, reusable components, and optimized API handling for efficient fleet operations.',
+      technologies: ['React', 'Real-time Tracking', 'API Optimization', 'Component Architecture'],
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
-      demoLink: '#',
-      githubLink: 'https://github.com/skinthiyaz',
-    },
-    {
-      title: 'Personal Portfolio',
-      description: 'A responsive portfolio website showcasing my projects and skills, built using modern frontend technologies.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
       demoLink: '#',
       githubLink: 'https://github.com/skinthiyaz',
     },
@@ -84,19 +80,20 @@ const Index = () => {
 
   const renderTechnicalSkills = () => {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
               <Code className="w-5 h-5 text-primary" />
-              Frontend Technologies
+              Frontend
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
-            <SkillBar name="HTML & CSS" level={90} />
-            <SkillBar name="JavaScript" level={85} />
-            <SkillBar name="React.js" level={80} />
-            <SkillBar name="TypeScript" level={70} />
+          <CardContent className="space-y-3">
+            <div className="flex flex-wrap gap-2">
+              {['React', 'Next.js', 'Tailwind', 'Redux', 'Material UI'].map((skill) => (
+                <Badge key={skill} variant="secondary" className="text-xs">{skill}</Badge>
+              ))}
+            </div>
           </CardContent>
         </Card>
         
@@ -104,14 +101,47 @@ const Index = () => {
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
               <Layers className="w-5 h-5 text-accent" />
-              Backend & Tools
+              Backend
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
-            <SkillBar name="Python" level={75} />
-            <SkillBar name="Database Management" level={70} />
-            <SkillBar name="Responsive Design" level={85} />
-            <SkillBar name="Machine Learning" level={60} />
+          <CardContent className="space-y-3">
+            <div className="flex flex-wrap gap-2">
+              {['Node.js', 'Express.js'].map((skill) => (
+                <Badge key={skill} variant="secondary" className="text-xs">{skill}</Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
+          <CardHeader>
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Monitor className="w-5 h-5 text-primary" />
+              APIs & Tools
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <div className="flex flex-wrap gap-2">
+              {['REST', 'WebSockets', 'Git', 'AWS', 'Netlify', 'CI/CD'].map((skill) => (
+                <Badge key={skill} variant="secondary" className="text-xs">{skill}</Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="border-accent/20 bg-gradient-to-br from-accent/5 to-transparent">
+          <CardHeader>
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Layout className="w-5 h-5 text-accent" />
+              Practices
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <div className="flex flex-wrap gap-2">
+              {['Agile', 'TDD', 'Performance Optimization'].map((skill) => (
+                <Badge key={skill} variant="secondary" className="text-xs">{skill}</Badge>
+              ))}
+            </div>
           </CardContent>
         </Card>
       </div>
@@ -147,6 +177,12 @@ const Index = () => {
       <main>
         {/* Enhanced Hero Section */}
         <HeroSection />
+        
+        {/* Profile Snapshot Section */}
+        <ProfileSnapshot />
+        
+        {/* Work Experience Section */}
+        <WorkExperience />
         
         {/* About Section - Enhanced */}
         <section id="about" className="py-20 md:py-32 bg-gradient-to-br from-accent/5 via-background to-primary/5 relative overflow-hidden">
@@ -261,6 +297,12 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+        {/* Certifications Section */}
+        <Certifications />
+        
+        {/* Resume Download Section */}
+        <ResumeDownload />
         
         {/* Services Section - Enhanced */}
         <section id="services" className="py-20 md:py-32 relative overflow-hidden">

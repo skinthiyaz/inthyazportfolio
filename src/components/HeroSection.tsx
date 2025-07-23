@@ -35,44 +35,35 @@ const HeroSection = () => {
           {/* Main Heading */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold leading-tight">
-              Hey, I&apos;m{' '}
-              <span className="relative inline-block bg-gradient-to-r from-primary via-blue-600 to-accent bg-clip-text text-transparent bg-[length:200%_100%] animate-[shimmer_3s_ease-in-out_infinite]">
-                Shaik Inthiyaz
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[slide_2s_ease-in-out_infinite] rounded-lg"></span>
-              </span>
+              Hi, I'm Shaik Inthiyaz 👋
             </h1>
             
-            {/* Subtitle with Typewriter Effect */}
+            {/* Subtitle */}
             <div className="text-xl md:text-2xl text-muted-foreground">
-              <span className="relative">
-                Crafting digital experiences with
-                <span className="ml-2 font-semibold text-primary">React.js</span>
-                <span className="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full animate-ping"></span>
+              <span className="bg-gradient-to-r from-primary via-blue-600 to-accent bg-clip-text text-transparent">
+                React Developer | Front-End Engineer | Software Enthusiast
               </span>
             </div>
           </div>
           
           {/* Description */}
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            A passionate frontend developer with strong skills in{' '}
-            <span className="font-semibold text-foreground">React.js</span>,{' '}
-            <span className="font-semibold text-foreground">JavaScript</span>, and{' '}
-            <span className="font-semibold text-foreground">Python</span>. Recent MCA graduate ready to create impactful web experiences.
+            Passionate about building clean, scalable UIs with real-time features and API-driven architecture.
           </p>
           
           {/* Stats */}
           <div className="flex flex-wrap gap-8 py-4">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">3+</div>
+              <div className="text-2xl font-bold text-primary">15+</div>
               <div className="text-sm text-muted-foreground">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">2024</div>
-              <div className="text-sm text-muted-foreground">MCA Graduate</div>
+              <div className="text-2xl font-bold text-primary">3+</div>
+              <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">5+</div>
-              <div className="text-sm text-muted-foreground">Technologies</div>
+              <div className="text-2xl font-bold text-primary">100%</div>
+              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
             </div>
           </div>
           
