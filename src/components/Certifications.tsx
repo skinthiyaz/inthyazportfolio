@@ -2,6 +2,7 @@ import React from 'react';
 import { Award, Code, GraduationCap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 const Certifications = () => {
   const certifications = [
@@ -9,19 +10,22 @@ const Certifications = () => {
       title: 'Certified in Frontend Technologies',
       issuer: 'Professional Certification',
       year: '2023',
-      icon: Code
+      icon: Code,
+      pdf: '/certs/frontend.pdf'
     },
     {
       title: 'Certified in Python',
       issuer: 'Programming Certification',
       year: '2022',
-      icon: Award
+      icon: Award,
+      pdf: '/certs/python.pdf'
     },
     {
       title: 'Certified in Developing Soft Skills & Personality',
       issuer: 'Professional Development',
       year: '2021',
-      icon: GraduationCap
+      icon: GraduationCap,
+      pdf: '/certs/softskills.pdf'
     }
   ];
 
@@ -50,6 +54,11 @@ const Certifications = () => {
               <CardContent className="text-center space-y-4">
                 <p className="text-muted-foreground">{cert.issuer}</p>
                 <Badge variant="outline" className="mx-auto">{cert.year}</Badge>
+                <div>
+                  <Button asChild size="sm" variant="default" className="mt-2">
+                    <a href={cert.pdf} target="_blank" rel="noopener noreferrer">View</a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}

@@ -23,7 +23,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="space-y-8 animate-fade-in">
+        <div className="order-2 lg:order-1 space-y-8 animate-fade-in">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-full backdrop-blur-sm">
             <Sparkles className="w-4 h-4 text-primary" />
@@ -98,7 +98,8 @@ const HeroSection = () => {
                 <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/shaikinthiyaz/" 
+                target="_blank"
                 className="group p-3 rounded-full bg-gradient-to-br from-primary/10 to-transparent border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
@@ -108,10 +109,10 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* Right Side - Profile Picture */}
-        <div className="relative lg:h-[600px] hidden lg:block animate-fade-in delay-300">
+        {/* Profile Picture & Animated Background - Responsive */}
+        <div className="relative flex justify-center items-center min-h-[320px] sm:min-h-[400px] md:min-h-[480px] lg:h-[600px] order-1 lg:order-2 animate-fade-in delay-300 mb-12 lg:mb-0">
           {/* Main Circle */}
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-blue-500/10 to-accent/30 overflow-hidden backdrop-blur-sm border border-primary/20">
+          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-blue-500/10 to-accent/30 overflow-hidden backdrop-blur-sm border border-primary/20 w-full h-full max-w-[350px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-none mx-auto">
             {/* Animated Background Pattern */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] animate-pulse"></div>
@@ -120,7 +121,7 @@ const HeroSection = () => {
             {/* Profile Circle */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative">
-                <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-lg">
+                <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-lg mx-auto">
                   {/* Profile Image */}
                   <img 
                     src="https://i.postimg.cc/4yyMY0fZ/Whats-App-Image-2025-05-24-at-13-00-14-c4486726.jpg"
@@ -145,14 +146,14 @@ const HeroSection = () => {
             </div>
             
             {/* Floating Tech Icons */}
-            <div className="absolute top-8 right-8 animate-bounce delay-300">
-              <div className="w-12 h-12 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                <span className="text-sm font-bold text-primary">JS</span>
+            <div className="absolute top-2 right-2 sm:top-8 sm:right-8 animate-bounce delay-300">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                <span className="text-xs sm:text-sm font-bold text-primary">JS</span>
               </div>
             </div>
-            <div className="absolute bottom-8 left-8 animate-bounce delay-700">
-              <div className="w-10 h-10 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                <span className="text-xs font-bold text-accent">PY</span>
+            <div className="absolute bottom-2 left-2 sm:bottom-8 sm:left-8 animate-bounce delay-700">
+              <div className="w-7 h-7 sm:w-10 sm:h-10 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                <span className="text-[10px] sm:text-xs font-bold text-accent">PY</span>
               </div>
             </div>
           </div>

@@ -24,9 +24,7 @@ const ProfileSnapshot = () => {
           <Card className="border-primary/20 bg-gradient-to-br from-background to-primary/5 shadow-xl mb-12">
             <CardContent className="p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Frontend developer with 3+ years of experience specializing in clean code practices, UI/UX focus, 
-                and performance optimization. Expertise in API integration, real-time features, and agile teamwork. 
-                Passionate about building scalable, maintainable solutions that deliver exceptional user experiences.
+              Frontend Developer with 3+ years of experience specializing in writing clean, maintainable code and building responsive, user-focused interfaces. Skilled in UI/UX design, performance optimization, and API integration, with hands-on experience in developing real-time features and scalable architectures. Strong team player in agile environments, passionate about delivering high-quality solutions that enhance user experience and meet business goals.
               </p>
             </CardContent>
           </Card>

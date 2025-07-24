@@ -7,11 +7,12 @@ interface ServiceCardProps {
   title: string;
   description: string;
   Icon: LucideIcon;
+  className?: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, Icon }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, Icon, className }) => {
   return (
-    <Card className="group border-primary/20 bg-gradient-to-br from-background to-primary/5 hover:shadow-2xl hover:border-primary/40 transition-all duration-500 hover:-translate-y-2">
+    <Card className={`group border-primary/20 bg-gradient-to-br from-background to-primary/5 hover:shadow-2xl hover:border-primary/40 transition-all duration-500 hover:-translate-y-2 ${className || ''}`}>
       <CardContent className="p-8 text-center">
         <div className="mb-6 flex justify-center">
           <div className="relative">

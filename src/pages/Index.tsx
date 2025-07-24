@@ -22,7 +22,7 @@ const Index = () => {
       title: 'Job Board Platform',
       description: 'A comprehensive job board platform with React, featuring API integration, real-time updates via WebSocket, and deployed with CI/CD pipeline for seamless user experience.',
       technologies: ['React', 'WebSocket', 'API Integration', 'CI/CD'],
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop', // Job board/office
       demoLink: '#',
       githubLink: 'https://github.com/skinthiyaz',
     },
@@ -30,7 +30,7 @@ const Index = () => {
       title: 'Truck Management System',
       description: 'React-based fleet management UI with real-time tracking capabilities, reusable components, and optimized API handling for efficient fleet operations.',
       technologies: ['React', 'Real-time Tracking', 'API Optimization', 'Component Architecture'],
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
+      image: 'https://res.cloudinary.com/impargo-gmbh/image/upload/v1660662282/lkw_cover_fleetmanagement_01_6c6f0d2994.png',
       demoLink: '#',
       githubLink: 'https://github.com/skinthiyaz',
     },
@@ -38,12 +38,7 @@ const Index = () => {
 
   const renderEducationTimeline = () => {
     const education = [
-      {
-        degree: 'Master of Computer Applications',
-        institution: 'JNTUK University',
-        year: '2024',
-        icon: GraduationCap,
-      },
+
       {
         degree: 'Bachelor of Computer Applications',
         institution: 'ANU University',
@@ -205,18 +200,15 @@ const Index = () => {
                     </h3>
                     <div className="space-y-6 text-lg leading-relaxed">
                       <p className="text-muted-foreground">
-                        I am a passionate frontend developer and recent MCA graduate from JNTUK University. With a strong foundation in frontend technologies, 
-                        I specialize in creating responsive, user-friendly web interfaces that combine aesthetic appeal with functional efficiency.
+                      Passionate and skilled Frontend Developer with over 3 years of professional experience in designing and delivering responsive, user-centric web applications. Holding a Bachelor’s degree in Computer Applications from Acharya Nagarjuna University, I bring a solid foundation in software development combined with real-world expertise in modern frontend technologies.
                       </p>
                       
                       <p className="text-muted-foreground">
-                        My journey in technology has equipped me with skills in HTML, CSS, JavaScript, React.js, and Python. I enjoy turning complex problems into 
-                        simple, intuitive designs. I'm particularly interested in user experience and creating web applications that are accessible to all users.
+                      Proficient in ReactJS, JavaScript (ES6+), TypeScript, HTML5, CSS3, and Tailwind CSS, I specialize in translating complex problems into clean, scalable, and intuitive interfaces. I have built and deployed full-scale web platforms with real-time capabilities, integrated APIs, and performance optimizations using tools like Redux, WebSockets, and CI/CD pipelines.
                       </p>
                       
                       <p className="text-muted-foreground">
-                        Beyond technical skills, I bring strong communication abilities, creativity in problem-solving, and a commitment to continuous learning. 
-                        I'm excited to apply my education and skills to create meaningful digital experiences and contribute to innovative projects.
+                      Proficient in ReactJS, JavaScript (ES6+), TypeScript, HTML5, CSS3, and Tailwind CSS, I specialize in translating complex problems into clean, scalable, and intuitive interfaces. I have built and deployed full-scale web platforms with real-time capabilities, integrated APIs, and performance optimizations using tools like Redux, WebSockets, and CI/CD pipelines.
                       </p>
                     </div>
                   </CardContent>
@@ -394,7 +386,7 @@ const Index = () => {
                       </a>
                     </Button>
                     <Button asChild variant="outline" size="lg" className="group border-accent/30 hover:border-accent">
-                      <a href="#" className="flex items-center gap-2">
+                      <a href="https://www.linkedin.com/in/shaikinthiyaz/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                         <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
                         LinkedIn
                       </a>

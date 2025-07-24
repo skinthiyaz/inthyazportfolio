@@ -1,10 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Switch } from '@/components/ui/switch';
+import { useTheme } from 'next-themes';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,6 +80,17 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          {/* Dark mode toggle */}
+          <div className="flex items-center ml-4">
+            <span className="mr-2 text-xs text-muted-foreground">🌞</span>
+            <Switch
+              checked={resolvedTheme === 'dark'}
+              onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+              aria-label="Toggle dark mode"
+              className="transition-colors"
+            />
+            <span className="ml-2 text-xs text-muted-foreground">🌙</span>
+          </div>
         </nav>
 
         <div className="md:hidden">

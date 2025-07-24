@@ -7,14 +7,28 @@ const WorkExperience = () => {
   const workExperience = [
     {
       company: 'Trangla Innovations Pvt Ltd',
+      companyDescription: 'Trangla Innovations is a technology-driven company specializing in logistics and fleet management solutions, delivering scalable SaaS products for enterprise clients.',
       position: 'Frontend Developer',
       duration: 'Dec 2021 - Present',
-      description: 'Developing modern web applications and fleet management systems using React and modern technologies.',
+      location: 'Hyderabad, India',
+      techStack: ['React.js', 'TypeScript', 'Redux', 'Tailwind CSS', 'WebSockets', 'REST APIs', 'CI/CD', 'AWS'],
+      description: 'As a Frontend Developer, I played a key role in architecting and developing modern web applications for logistics and fleet management. My focus was on building scalable, maintainable, and high-performance user interfaces that deliver seamless user experiences for enterprise clients.',
+      responsibilities: [
+        'Collaborated with cross-functional teams (design, backend, QA) to deliver end-to-end features.',
+        'Transformed UI/UX designs into responsive, accessible, and pixel-perfect web interfaces.',
+        'Implemented state management and data flow using Redux and Context API.',
+        'Integrated real-time data updates using WebSockets for live fleet tracking and notifications.',
+        'Optimized application performance through code splitting, lazy loading, and best practices.',
+        'Wrote reusable, modular components and maintained a scalable component library.',
+        'Ensured code quality with unit tests, code reviews, and adherence to best practices.',
+        'Participated in Agile ceremonies, sprint planning, and regular client demos.'
+      ],
       achievements: [
-        'Developed front-end for fleet management system',
-        'Built modular UI components with React',
-        'Integrated real-time features and cloud deployment',
-        'Implemented performance optimizations and responsive design'
+        'Developed the front-end for a large-scale fleet management system used by logistics companies.',
+        'Reduced page load times by 40% through performance optimization and code refactoring.',
+        'Built a real-time dashboard for live vehicle tracking, improving dispatcher efficiency.',
+        'Created a reusable component library, accelerating development for new features.',
+        'Received Employee of the Month award for outstanding project delivery.'
       ]
     }
   ];
@@ -47,6 +61,15 @@ const WorkExperience = () => {
                       {experience.position}
                     </CardTitle>
                     <p className="text-xl font-semibold text-accent mt-2">{experience.company}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{experience.companyDescription}</p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {experience.techStack.map((tech, i) => (
+                        <span key={i} className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full font-medium">{tech}</span>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-2 mt-2">
+                      <span className="text-xs text-muted-foreground">{experience.location}</span>
+                    </div>
                   </div>
                   <Badge variant="outline" className="flex items-center gap-2 w-fit">
                     <Calendar className="w-4 h-4" />
@@ -54,11 +77,19 @@ const WorkExperience = () => {
                   </Badge>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {experience.description}
-                </p>
-                
+              <CardContent className="space-y-8">
+                <div>
+                  <h4 className="font-semibold mb-2 text-primary">Role Overview</h4>
+                  <p className="text-lg text-muted-foreground leading-relaxed">{experience.description}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2 text-primary">Key Responsibilities</h4>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                    {experience.responsibilities.map((resp, idx) => (
+                      <li key={idx}>{resp}</li>
+                    ))}
+                  </ul>
+                </div>
                 <div>
                   <h4 className="font-semibold mb-4 flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
