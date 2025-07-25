@@ -363,7 +363,9 @@ const Index = () => {
                       </div>
                       <div>
                         <p className="font-medium">Email</p>
-                        <p className="text-muted-foreground">shaikinthiyaz7729@gmail.com</p>
+                        <p className="text-muted-foreground break-all">{/* or truncate, or overflow-x-auto */}
+                          shaikinthiyaz7729@gmail.com
+                        </p>
                       </div>
                     </div>
                     
@@ -378,14 +380,14 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4">
-                    <Button asChild variant="outline" size="lg" className="group border-primary/30 hover:border-primary">
+                  <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <Button asChild variant="outline" size="lg" className="w-full sm:w-auto group border-primary/30 hover:border-primary">
                       <a href="https://github.com/skinthiyaz" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                         <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
                         GitHub
                       </a>
                     </Button>
-                    <Button asChild variant="outline" size="lg" className="group border-accent/30 hover:border-accent">
+                    <Button asChild variant="outline" size="lg" className="w-full sm:w-auto group border-accent/30 hover:border-accent">
                       <a href="https://www.linkedin.com/in/shaikinthiyaz/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                         <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
                         LinkedIn

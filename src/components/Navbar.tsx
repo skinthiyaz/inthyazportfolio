@@ -94,7 +94,13 @@ const Navbar = () => {
         </nav>
 
         <div className="md:hidden">
-          <MobileNav links={navLinks} activeSection={activeSection} onSectionClick={scrollToSection} />
+          <MobileNav 
+            links={navLinks} 
+            activeSection={activeSection} 
+            onSectionClick={scrollToSection}
+            resolvedTheme={resolvedTheme}
+            setTheme={setTheme}
+          />
         </div>
       </div>
     </header>
@@ -104,11 +110,15 @@ const Navbar = () => {
 const MobileNav = ({ 
   links, 
   activeSection, 
-  onSectionClick 
+  onSectionClick,
+  resolvedTheme,
+  setTheme
 }: { 
   links: { label: string; id: string }[]; 
   activeSection: string;
   onSectionClick: (id: string) => void;
+  resolvedTheme: string;
+  setTheme: (theme: string) => void;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -157,6 +167,17 @@ const MobileNav = ({
                 {link.label}
               </a>
             ))}
+            {/* Dark mode toggle for mobile */}
+            <div className="flex items-center justify-center mt-4">
+              <span className="mr-2 text-xs text-muted-foreground">🌞</span>
+              <Switch
+                checked={resolvedTheme === 'dark'}
+                onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+                aria-label="Toggle dark mode"
+                className="transition-colors"
+              />
+              <span className="ml-2 text-xs text-muted-foreground">🌙</span>
+            </div>
           </div>
         </div>
       )}
