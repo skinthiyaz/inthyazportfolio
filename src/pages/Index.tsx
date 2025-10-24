@@ -364,7 +364,7 @@ const Index = () => {
                       <div>
                         <p className="font-medium">Email</p>
                         <p className="text-muted-foreground break-all">{/* or truncate, or overflow-x-auto */}
-                          shaikinthiyaz7729@gmail.com
+                          shaikinthiyaz8147@gmail.com.com
                         </p>
                       </div>
                     </div>

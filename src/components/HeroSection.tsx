@@ -124,7 +124,7 @@ const HeroSection = () => {
                 <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-lg mx-auto">
                   {/* Profile Image */}
                   <img 
-                    src="https://i.postimg.cc/4yyMY0fZ/Whats-App-Image-2025-05-24-at-13-00-14-c4486726.jpg"
+                    src="https://i.postimg.cc/3xKHVM0N/IMG-20251024-111603.jpg"
                     alt="Shaik Inthiyaz"
                     className="w-full h-full object-cover"
                   />
